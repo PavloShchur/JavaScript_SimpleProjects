@@ -1,0 +1,50 @@
+#container {
+    background-color: #1c94c4;
+}
+
+#question {
+    background-color: #999999;
+    width: auto;
+    height: auto;
+}
+
+.border2_solid_red {
+    border: 2px solid red;
+}
+
+.padding_10px {
+    padding: 10px;
+}
+
+.borderRadius_25px {
+    border-radius: 25px;
+}
+
+.textAlign_center {
+    text-align: center;
+}
+
+.question {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 50px 20px;
+}
+
+.answer {
+    border: 2px solid red;
+    padding: 5px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 50px 20px;
+    width: 130px;
+    text-align: center;
+}
+
+.width {
+    width: 100%;
+}
+
+.hover:hover {
+    color: green;
+}
+
