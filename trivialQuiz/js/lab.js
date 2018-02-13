@@ -14,13 +14,13 @@ questions.push(question_3.question);
 questions.push(question_4.question);
 questions.push(question_5.question);
 
-let question_oneAnswer, question_twoAnswer, question_threeAnswer, question_fourAnswer, question_fiveAnswer;
+let questionNumberToanswersList = new Map();
 
-question_oneAnswer = ['Sloeil Moon Frye', 'Meeno Poolous', 'Heather Locklear', 'Molly Ringwald'];
-question_twoAnswer = ['Jim Henson', 'Art Van Delay', 'Caroll Spinney', 'Bob Keeshan'];
-question_threeAnswer = ['Unated States', 'Israel', 'France', 'Canada'];
-question_fourAnswer = ['1978', '1980', '1981', '1985'];
-question_fiveAnswer = ['New York Mets', 'Toronto Blue Jeys', 'LA Dodgers', 'New York Yankees'];
+questionNumberToanswersList.set(0, ['Sloeil Moon Frye', 'Meeno Poolous', 'Heather Locklear', 'Molly Ringwald']);
+questionNumberToanswersList.set(1, ['Jim Henson', 'Art Van Delay', 'Caroll Spinney', 'Bob Keeshan']);
+questionNumberToanswersList.set(2, ['Unated States', 'Israel', 'France', 'Canada']);
+questionNumberToanswersList.set(3, ['1978', '1980', '1981', '1985']);
+questionNumberToanswersList.set(4, ['New York Mets', 'Toronto Blue Jeys', 'LA Dodgers', 'New York Yankees']);
 
 let correctAnswersIndexes;
 correctAnswersIndexes = [0, 2, 3, 2, 3];

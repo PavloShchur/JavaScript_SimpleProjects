@@ -60,7 +60,9 @@ function wrongAnswer() {
 
     if (questionNumber < NUMBER_OF_QUESTIONS) {
         questionNumber++;
+        console.time('displayQuestion : start');
         displayQuestion(questionNumber);
+        console.timeEnd('displayQuestion : end');
     } else {
         gameOver();
     }
@@ -71,17 +73,7 @@ function displayQuestion(questionNumber = 0) {
 
     document.getElementById('question').innerHTML = '<h1>' + questions[questionNumber] + '</h1>';
 
-    if (questionNumber === 0) {
-        answerSet = question_oneAnswer;
-    } else if (questionNumber === 1) {
-        answerSet = question_twoAnswer;
-    } else if (questionNumber === 2) {
-        answerSet = question_threeAnswer;
-    } else if (questionNumber === 3) {
-        answerSet = question_fourAnswer;
-    } else if (questionNumber === 4) {
-        answerSet = question_fiveAnswer;
-    }
+    answerSet = questionNumberToanswersList.get(questionNumber);
 
     displayAnswers(answerSet);
 
