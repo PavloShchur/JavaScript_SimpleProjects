@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .border-top{
+     border-top: 1px solid black;
+     padding-bottom: 10px;
+     padding-top:10px;
+    }
+.red{
+/*    background-color: white;*/
+/*    height: 100px;*/
+    
+}
+.blue{
+    background-color: white;
+/*    height: 100px;*/
+}
+.yellow{
+    background-color: white;
+/*    height: 100px;*/
+}
+.border{
+    border: 2px solid black;
+    height: 100px;
+}
+.main{
+    margin: auto;
+}
+.top-header-menu{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0;
+}
+.top-header-menu>div{
+    display: inline-block;
+    padding: 0 8px;
+    text-transform: uppercase;    
+}
+.top-social{
+    width: 75%;
+    float: left;
+    font-size: 0px;
+    margin-top: 10px;
+    padding: 0 15px;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.top-social-item{
+    display: inline-block;
+    color: #888;
+    border: #e3e3e3 1px solid;
+    width: 60px;
+    height: 40px;
+    margin-right: 8px;
+}
+.top-social-item img{
+    width: 40px;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    
+}
+.top-option {
+    width:50%;
+    float: right;
+    font-size: 0;
+    padding: 10px;
+    
+}
+
+.lang-option {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.lang-item {
+    text-align: left;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 6px;
+}
+
+.search-user-option{
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    border: #e3e3e3 1px solid; 
+}
+.search-user-option img{
+    width: 40px;
+    display: block;
+    height:auto;
+    margin: 0 auto;
+}
+.top-menu {
+    width: 100%;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.top-menu>div{
+    display:inline-block;
+    padding: 0 8px;
+    text-transform: uppercase;
+}
+.main-logo{
+    text-align: center;
+}
+
+.red-line {
+    background: #900022;
+    min-height: 5px;
+}
+.blocktitle{
+    font-size: 20px;
+}
+.blocktitle2{
+    font-size: 14px;
+}
+.footer{
+    height: 70px;
+    background-color: aqua;
+}
+.header{
+    text-align: right;
+}
+.clock{
+    text-align: left;
+}
+.articletitle{
+    text-align: left;
+}
+.clear-fix::after, clear-fix:: before{
+    content: "";
+    display: block;
+    clear: both;
+}
+@media screen and (min-width: 700px) and (max-width: 1000px){
+    .left, .right, .center{
+        width: 33.33%;
+    }
+    .top-social, .top-option, .header1{
+        display: none;
+    }  
+    
+}
+@media screen and (max-width: 699px){
+    .main, .footer, .header, .left, .right, .center{
+        width: 100%
+    }
+.top-social, .top-option, .header1{
+      display: none;
+    }
+   
