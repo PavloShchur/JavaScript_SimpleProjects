@@ -6,11 +6,8 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
-
 // load all event listeners
 loadAllEventListeners();
-
-
 
 // load all event listeners
 function loadAllEventListeners() {
@@ -34,15 +31,11 @@ function loadAllEventListeners() {
 
 // get tasks from local storage
 function getTasks() {
-    let tasks;
+   let tasks;
 
-    if(localStorage.getItem('tasks') === null){
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
-    
-    tasks.forEach(function (task) {
+   tasks = checkLocalStorage(tasks);
+
+       tasks.forEach(function (task) {
         // create li element
         const li = document.createElement('li');
         // add class
@@ -100,15 +93,9 @@ function addTask(e) {
 function storeTaskInLocalStorage(task) {
     let tasks;
 
-    if(localStorage.getItem('tasks') === null){
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
+    tasks = checkLocalStorage(tasks);
 
     tasks.push(task);
-
-    console.log(localStorage.getItem('tasks'));
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
@@ -129,11 +116,7 @@ function removeTask(e) {
 function removeTaskFromLocalStorage(taskItem) {
     let tasks;
 
-    if(localStorage.getItem('tasks') === null){
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
+    tasks = checkLocalStorage(tasks);
 
     tasks.forEach(function (task, index) {
         if(taskItem.textContent === task){
@@ -168,7 +151,7 @@ function filterTasks(e) {
     document.querySelectorAll('.collection-item').forEach(function (task) {
         if(task.firstChild.textContent.toLowerCase().indexOf(text) !== -1){
             task.style.display = 'block';
-        }else{
+        } else {
             task.style.display = 'none';
         }
     });
