@@ -1,0 +1,44 @@
+.bottom-widgets {
+    width: 100%;
+    @include clearfix;
+    
+    margin-top: 1.5em;
+    
+    @media(max-width: $small){
+        padding: 0 10px;
+    }
+    
+        .widget {
+        @include span-columns(3);
+        @media(max-width: $small){
+            @include span-columns(12);
+        }
+        
+        h3 {
+            background: $hip-brown;
+            padding: 1em .75em;
+            color: white;
+        }
+        ul {
+            font-size: 80%;
+            list-style: square inside;
+            magin: 0;
+            padding: 0 1em;;
+            
+            li {
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+            }
+            a{
+                color: $dark-grey;
+                display: block;
+                text-decoration: none;
+                padding: 1em 0;
+                border-bottom: 1px solid rgba(black, .10);
+            }
+        }
+    }
+}
