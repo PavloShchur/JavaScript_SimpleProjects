@@ -1,11 +1,13 @@
 document.body.onload = start;
 
 function start() {
-    addElement().then(function () {
-        for(let i = 0; i < 10; i++) {
-            console.log('init');
-            dragElement(document.getElementById(("mydiv" + i)));
-        }
+    createPlayground().then(function () {
+        addElement().then(function () {
+            for(let i = 0; i < 10; i++) {
+                console.log('init');
+                dragElement(document.getElementById(("mydiv" + i)));
+            }
+        })
     })
 }
 
